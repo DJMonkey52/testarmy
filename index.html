@@ -526,7 +526,7 @@
                 </div>
                 <h1>ARMY Eclipse</h1>
             </div>
-            <p class="subtitle">ARMY ECLIPSE | Система заявок и отчётов</p>
+            <p class="subtitle">ARMY ECLIPSE | Система заявок</p>
         </div>
 
         <div id="mainPage" class="page">
@@ -540,7 +540,7 @@
                 <div class="main-card" data-type="transfer">
                     <div class="main-card-icon">🔄</div>
                     <h3>Перевод в армию</h3>
-                    <p>Перевод из другой структуры в ARMY</p>
+                    <p>Перевод из другой государственой структуры в ARMY</p>
                     <div class="main-card-arrow"><i class="fas fa-arrow-right"></i></div>
                 </div>
                 <div class="main-card" data-type="restore">
@@ -726,8 +726,8 @@
             if (type === 'enlist') {
                 title.innerHTML = '<i class="fas fa-user-plus"></i> 📝 Заявка на трудоустройство в ARMY';
                 fieldsDiv.innerHTML = `
-                    <div class="input-group"><label><i class="fas fa-user"></i> Ваше Имя Фамилия</label><input type="text" id="e_fullname" placeholder="Ivan Petrov"></div>
-                    <div class="input-group"><label><i class="fas fa-id-card"></i> Ваш номер паспорта</label><input type="text" id="e_passport" placeholder="1234-567890"></div>
+                    <div class="input-group"><label><i class="fas fa-user"></i> Ваше Имя Фамилия</label><input type="text" id="e_fullname" placeholder="Alexandr DeHaus"></div>
+                    <div class="input-group"><label><i class="fas fa-id-card"></i> Ваш номер паспорта</label><input type="text" id="e_passport" placeholder="462675"></div>
                     <div class="input-group"><label><i class="fas fa-calendar-alt"></i> Ваш возраст / сколько лет проживаете в штате (Пример: 25/5)</label><input type="text" id="e_ageyear" placeholder="25/5"></div>
                     <div class="input-group"><label><i class="fas fa-image"></i> Фото документов (Паспорт, мед.карта, лицензии) — ссылка Imgur/Yapx одной ссылкой</label><input type="text" id="e_photodocs" placeholder="https://imgur.com/..."></div>
                     <div class="input-group"><label><i class="fas fa-tshirt"></i> Фото всего тела (Спереди и сзади) — ссылка Imgur/Yapx одной ссылкой</label><input type="text" id="e_photobody" placeholder="https://imgur.com/..."></div>
@@ -737,14 +737,14 @@
                     <div class="input-group"><label><i class="fas fa-birthday-cake"></i> Ваш возраст ООС</label><input type="text" id="e_oocage" placeholder="22"></div>
                     <div class="input-group"><label><i class="fas fa-clock"></i> Время по МСК</label><input type="text" id="e_msktime" placeholder="14:00 - 22:00"></div>
                     <div class="input-group"><label><i class="fas fa-chart-line"></i> Средний онлайн (часов в день)</label><input type="text" id="e_avgonline" placeholder="4-6 часов"></div>
-                    <div class="input-group"><label><i class="fas fa-book"></i> Расшифруйте DM, TK, SK (По OOC)</label><textarea rows="2" id="e_abbrev" placeholder="DM - Deathmatch, TK - Teamkill, SK - Serverkill? ..."></textarea></div>
+                    <div class="input-group"><label><i class="fas fa-book"></i> Расшифруйте DM, TK, SK (По OOC)</label><textarea rows="2" id="e_abbrev" placeholder="Ваше понимание..."></textarea></div>
                     <div class="input-group"><label><i class="fab fa-discord"></i> Discord для связи</label><input type="text" id="e_discord" placeholder="username#0000"></div>
                 `;
             } 
             else if (type === 'transfer') {
                 title.innerHTML = '<i class="fas fa-exchange-alt"></i> 🔄 Перевод в армию';
                 fieldsDiv.innerHTML = `
-                    <div class="input-group"><label><i class="fas fa-user"></i> Ваше Имя Фамилия</label><input type="text" id="t_fullname" placeholder="Ivan Petrov"></div>
+                    <div class="input-group"><label><i class="fas fa-user"></i> Ваше Имя Фамилия</label><input type="text" id="t_fullname" placeholder="Alexandr DeHaus"></div>
                     <div class="input-group"><label><i class="fas fa-building"></i> Из какой структуры хотите перевестись?</label><select id="t_fromstruct"><option value="">-- Выберите --</option><option>FIB</option><option>LSPD</option><option>LSSD</option><option>SASPA</option><option>GOV</option></select></div>
                     <div class="input-group"><label><i class="fas fa-passport"></i> Ваш номер паспорта</label><input type="text" id="t_passport" placeholder="1234-567890"></div>
                     <div class="input-group"><label><i class="fas fa-camera"></i> Ваш текущий ранг скриншотом (ссылка Imgur/Yapx)</label><input type="text" id="t_rankscr" placeholder="https://imgur.com/..."></div>
@@ -755,8 +755,8 @@
             else if (type === 'restore') {
                 title.innerHTML = '<i class="fas fa-undo-alt"></i> 🔁 Восстановление в армию';
                 fieldsDiv.innerHTML = `
-                    <div class="input-group"><label><i class="fas fa-user"></i> Ваше Имя Фамилия</label><input type="text" id="r_fullname" placeholder="Ivan Petrov"></div>
-                    <div class="input-group"><label><i class="fas fa-id-card"></i> Ваш номер паспорта</label><input type="text" id="r_passport" placeholder="1234-567890"></div>
+                    <div class="input-group"><label><i class="fas fa-user"></i> Ваше Имя Фамилия</label><input type="text" id="r_fullname" placeholder="Alexandr DeHaus"></div>
+                    <div class="input-group"><label><i class="fas fa-id-card"></i> Ваш номер паспорта</label><input type="text" id="r_passport" placeholder="675477"></div>
                     <div class="input-group"><label><i class="fas fa-chevron-up"></i> Ваш ранг до увольнения</label><select id="r_rankbefore"><option value="">-- Выберите --</option><option>Рекрут (1)</option><option>Рядовой (2)</option><option>Специалист (3)</option><option>Капрал (4)</option><option>Сержант (5)</option><option>Штаб-сержант (6)</option><option>Уорент-офицер (7)</option><option>Старший Уорент-офицер (8)</option><option>Лейтенант (9)</option><option>Капитан (10)</option><option>Майор (11)</option><option>Подполковник (12)</option></select></div>
                     <div class="input-group"><label><i class="fab fa-discord"></i> Ваш Дискорд</label><input type="text" id="r_discord" placeholder="username#0000"></div>
                 `;
