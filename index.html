@@ -91,18 +91,23 @@
             from { opacity: 0; transform: scale(0.92); }
             to { opacity: 1; transform: scale(1); }
         }
-        .welcome-logo {
-            width: 110px;
-            height: 110px;
+        .welcome-icon {
+            width: 100px;
+            height: 100px;
             background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-            border-radius: 35px;
+            border-radius: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 25px;
-            font-size: 60px;
+            font-size: 52px;
             color: #f0f7e6;
             box-shadow: 0 20px 35px rgba(0,0,0,0.4);
+            animation: floatWelcome 2.5s ease-in-out infinite;
+        }
+        @keyframes floatWelcome {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
         }
         .welcome-text {
             font-size: 2.2rem;
@@ -496,9 +501,12 @@
     </style>
 </head>
 <body>
+    <!-- WELCOME OVERLAY с иконкой сверху -->
     <div class="welcome-overlay" id="welcomeOverlay">
         <div class="welcome-content">
-            <div class="welcome-logo"><i class="fas fa-shield-haltered"></i></div>
+            <div class="welcome-icon">
+                <i class="fas fa-shield-haltered"></i>
+            </div>
             <div class="welcome-text">Добро пожаловать на сайт ARMY Eclipse</div>
             <div class="welcome-sub"><i class="fas fa-crown"></i> Система подачи заявок ARMY</div>
         </div>
@@ -512,6 +520,7 @@
     <div class="container">
         <div class="header">
             <div class="logo">
+                <!-- КВАДРАТНАЯ ИКОНКА СЛЕВА ОТ НАДПИСИ ARMY Eclipse -->
                 <div class="logo-icon">
                     <i class="fas fa-shield-haltered"></i>
                 </div>
@@ -754,7 +763,7 @@
             }
         }
 
-        // WELCOME ANIMATION
+        // WELCOME ANIMATION (2 секунды)
         setTimeout(() => {
             const overlay = document.getElementById('welcomeOverlay');
             if(overlay) {
